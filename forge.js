@@ -1,20 +1,48 @@
-const Metalsmith = require('metalsmith');
-const markdown   = require('metalsmith-markdown');
-const layouts    = require('metalsmith-layouts');
-const discoverPartials = require('metalsmith-discover-partials');
+const marked = require("marked");
+const fse = require("fs-extra");
+const Handlebars = require("handlebars")
+const yamlFront = require("yaml-front-matter");
 
 
+module.exports = {
+    build: function () {
+        //const reg = /\.[^.]+$/;
+        listprojects = {};
 
-module.exports=function(){
-  return Metalsmith(__dirname)
-      .source('./src')         // source directory for the pipeline
-      .use(discoverPartials())  // <-- find and register template partials
-      .use(markdown())         // <-- convert Markdown to HTML
-      .use(layouts({           // <-- process all HTML files with Handlebars
-          default: 'page.hbs',
-          engine: 'handlebars'
-      }))
-      .destination('./build')  // destination directory of the pipeline
-      .clean(true)             // clean the destination directory before build
+
+        fse.removeSync("./build");
+
+
+        // building project page
+        var project_template = Handlebars.compile(fse.readFileSync("./templates/project.hbs", "utf8"));
+
+
+        fse.readdirSync("./projects").forEach(project => {
+            //var projectname = project.split(reg)[0];
+            var project_data = yamlFront.loadFront(fse.readFileSync("./projects/" + project + "/" + project + ".md", "utf8"));
+
+            project_data["__content"] = marked(project_data["__content"]);
+
+            listprojects[project] = project_data; //building a list to be used in the partial for the index page
+
+            fse.outputFileSync("./build/projects/" + project + ".html", project_template(project_data));
+
+        })
+
+
+        //building index page
+
+        Handlebars.registerPartial("projectSmallPartial", fse.readFileSync("./partials/project_small.hbs", "utf8"));
+
+        var index_template = Handlebars.compile(fse.readFileSync("./templates/index.hbs", "utf8"));
+
+        var index_data = listprojects;
+
+        console.log(index_data)
+
+        fse.outputFileSync("./build/index.html", index_template(index_data));
+
+
+    }
 
 }

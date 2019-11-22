@@ -1,0 +1,19 @@
+/* ==========================================================================
+   Generic styles
+   ========================================================================== */
+
+
+.flex-container {
+    display: flex;
+}
+
+.projectSmall-container {
+    display: flex;
+    align-items: stretch;
+    background-color: #f1f1f1f1;
+}
+
+.projectSmall-container > div {
+    text-align: center;
+
+}
