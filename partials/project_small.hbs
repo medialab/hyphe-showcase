@@ -1,26 +1,34 @@
-  {{#each index_data}}
+  {{#each this}}
 
-    <div style="padding = 16px" class="projectSmall-container">
-      <div class="screenshot_network">
+    <div class="projectSmall-container">
+      <a class="mdl-navigation__link" href="./projects/{{slug}}.html">
+        <div class=" zoom project-card mdl-card mdl-shadow--2dp">
+          <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">{{title}}</h2>
+          </div>
+          <div class="mdl-card__supporting-text">
+            {{short_abstract}}
+          </div>
+          <div class="mdl-card__actions mdl-card--border ">
 
-      </div>
+
+            <span class="mdl-list__item-primary-content">
+              <i class="material-icons mdl-list__item-icon">person</i>
+              {{ author }}
+            </span>
+
+            <span class="mdl-list__item-primary-content">
+              <i class="material-icons mdl-list__item-icon">calendar_today</i>
+              {{ date }}
+            </span>
 
 
-      <ul class="mdl-list">
-        <span class="mdl-list__item-primary-content">
-          <i class="material-icons mdl-list__item-icon">description</i>
-          {{ title }}
-        </span>
+            </ul>
+          </div>
 
-        <span class="mdl-list__item-primary-content">
-          <i class="material-icons mdl-list__item-icon">person</i>
-          {{ author }}
-        </span>
 
-        <span class="mdl-list__item-primary-content">
-          {{ date }}
-        </span>
+        </div>
+      </a>
 
-      </ul>
     </div>
   {{/each}}

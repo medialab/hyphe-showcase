@@ -8,7 +8,7 @@
     "serve": "npm run build && cd build && http-server -o -p 8000",
     "live": "nodemon server.js",
     "dev-server": "sleep 2 && cd build && http-server -o -p 8000",
-    "dev": "concurrently 'npm run watch' 'npm run dev-server' --kill-others"
+    "dev": "concurrently 'npm run live' 'npm run dev-server' --kill-others"
   },
   "author": "",
   "license": "ISC",
