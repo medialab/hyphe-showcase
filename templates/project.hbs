@@ -2,9 +2,11 @@
 
 <head>
   <meta charset="UTF-8">
+  <link rel='icon' href='../assets/favicon.ico' type='image/x-icon'/>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
-  <link rel="stylesheet" type="text/css" href="../build/assets/vitrine.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../assets/vitrine.css">
   <title> {{title}} </title>
 </head>
 
@@ -13,22 +15,76 @@
   <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
     <div class="mdl-layout__drawer">
       <div class="mdl-layout__title">Hyphe Showcase</div>
-      <img src="./build/assets/HYPHE.svg" alt="hyphe logo">
+      <img src="../assets/HYPHE.svg" alt="hyphe logo">
       <nav class="mdl-navigation">
-        <a class="mdl-navigation__link" href="../build/index.html">Projects</a>
-        <a class="mdl-navigation__link" href="../build/about.html">About</a>
-        <a class="mdl-navigation__link" href="https://medialab.sciencespo.fr/"> <img src="/home/martin/Documents/vitrine_final/build/assets/medialab.png" alt="medialab logo"></a>
+        <a class="mdl-navigation__link" href="../index.html">Projects</a>
+        <a class="mdl-navigation__link" href="../about.html">About</a>
+        <a class="mdl-navigation__link" href="https://medialab.sciencespo.fr/"> <img src="../assets/medialab.png" alt="medialab logo"></a>
 
       </nav>
     </div>
 
     <main class="mdl-layout__content">
-      <div class="mdl-layout main-content">
 
-        <h1>
-          {{title}}
-        </h1>
+      <h1>
+        {{title}}
+      </h1>
+      <div style=" display:flex; flex-direction: row; justify-content: space-evenly; margin: 16px">
+        <div style=" display:flex; width: 20%">
+          <i class="material-icons mdl-list__item-icon">people</i>
+          <div style="display:flex; flex-direction: column; margin: 5px;">
+            <b>Authors: </b>
+            <ul>
+              {{#each authors as |author|}}
+                <li>{{author}} </li>
+              {{/each}}
+            </ul>
+          </div>
+        </div>
+        <div style=" display:flex; width: 20%">
+          <i class="material-icons mdl-list__item-icon">people</i>
+          <div style="display:flex; flex-direction: column; margin: 5px;">
+            <b>Publications about this topic: </b>
+            <ul>
+              {{#each publications as |publication|}}
+                <li><a href={{publication.link}}>{{publication.link}}</a> </li>
+              {{/each}}
+            </ul>
+          </div>
+        </div>
+        <div style=" display:flex; width: 15%">
+          <i class="material-icons mdl-list__item-icon">calendar_today</i>
+          <div style="display:flex; flex-direction: column; margin: 5px; ">
 
+            <b>Publication date:</b>
+            <div> {{year}} </div>
+          </div>
+        </div>
+
+      </div>
+
+      {{#if short_abstract}}
+        <div style=" display:flex; margin-left: 20%; margin-right: 20%; margin-top: 16px; margin-bottom: 16px">
+          <p>
+            <i>{{short_abstract}}</i>
+          </p>
+        </div>
+
+      {{/if}}
+
+      <div class="graph-embed">
+        <iframe allowfullscreen style="border: none; width: 800px; height: 500px" src={{url_embed}} alt="graph embed">
+        </iframe>
+      </div>
+
+      <div style=" display:flex; margin-left: 20%; margin-right: 20%; margin-top: 16px; margin-bottom: 16px">
+        <i class="material-icons mdl-list__item-icon">menu_book</i>
+        <div class="md_content">
+          <p>
+            <b>Description:</b>
+            {{{__content}}}
+          </p>
+        </div>
       </div>
 
     </main>

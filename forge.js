@@ -24,14 +24,16 @@ module.exports = {
 
     fse.readdirSync("./projects").forEach(project => {
       //var projectname = project.split(reg)[0];
-      var project_data = yamlFront.loadFront(fse.readFileSync("./projects/" + project + "/" + project + ".md", "utf8"));
-      console.log(project)
+      var project_data = yamlFront.loadFront(fse.readFileSync("./projects/" + project + "/description.md", "utf8"));
 
-      project_data["__content"] = marked(project_data["__content"]);
+      project_data["slug"] = project
+
+      project_data["__content"] = marked(project_data["__content"]); //turn .md description into HTML
 
       listprojects[project] = project_data; //building a list to be used in the partial for the index page
 
-      fse.outputFileSync("./build/projects/" + project_data.slug + ".html", project_template(project_data));
+
+      fse.outputFileSync("./build/projects/" + project + ".html", project_template(project_data));
     })
 
 
@@ -41,11 +43,10 @@ module.exports = {
 
     var index_template = Handlebars.compile(fse.readFileSync("./templates/index.hbs", "utf8"));
 
-    var index_data = listprojects;
 
+    fse.outputFileSync("./build/index.html", index_template(listprojects));
 
-    fse.outputFileSync("./build/index.html", index_template(index_data));
-
+    fse.copy("./templates/about.html", "./build/about.html")
 
 
   }

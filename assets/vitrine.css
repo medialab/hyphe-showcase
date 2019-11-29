@@ -3,16 +3,34 @@
    ========================================================================== */
 body {
   color: #555;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
 }
 
 h1 {
-  font-weight: 10;
+  font-weight: 100;
   font-size: 4em;
   display: flex;
   justify-content: center;
 }
 
+h2 {
+  font-weight: 100;
+  font-size: 2.5em;
+  display: flex;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+}
+
+ul {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+
+/* Disable link style for the cards */
 a.nostyle:link {
   text-decoration: inherit;
   color: inherit;
@@ -30,13 +48,21 @@ a.nostyle:visited {
   flex-direction: row;
 }
 
+.project-text {
+  display: flex;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
 .flex-container {
   display: flex;
 }
 
 .main-content {
   display: flex;
-  padding: 20 %;
+  padding-top: 5%;
   justify-content: center;
 }
 
@@ -69,27 +95,51 @@ a.nostyle:visited {
 }
 
 .zoom {
-  transition: transform .2s; /* Animation */
+  transition: transform .2s;
+  /* Animation */
 }
 
 .zoom:hover {
-  transform: scale(1.05); 
+  transform: scale(1.05);
 }
 
 /* Drawer */
 .mdl-layout__drawer>.mdl-layout__title {
   display: flex;
-  weight: 100;
+  font-weight: 300;
   font-size: 32px;
   text-align: center;
-  padding: 8px;
+  margin-top: 16px;
+  padding: 0px;
   color: #757575;
 }
 
 .mdl-layout__drawer>img {
-  padding: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+
 }
 
 .mdl-navigation__link {
   font-size: 20px;
+}
+
+/* Embed */
+.graph-embed {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 16px;
+}
+
+/* md_content */
+.md_content {
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+}
+
+.md_content>h1 {
+  font-size: 2.5em;
+  justify-content: flex-start;
 }
