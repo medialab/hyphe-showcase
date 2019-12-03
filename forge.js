@@ -1,6 +1,6 @@
 const marked = require("marked");
 const fse = require("fs-extra");
-const Handlebars = require("handlebars")
+const Handlebars = require("handlebars");
 const yamlFront = require("yaml-front-matter");
 
 
@@ -16,7 +16,7 @@ module.exports = {
     fse.removeSync("./build");
 
     //getting the assets
-    fse.copy("./assets", "./build/assets")
+    fse.copySync("./assets", "./build/assets");
 
     // building project page
     var project_template = Handlebars.compile(fse.readFileSync("./templates/project.hbs", "utf8"));
@@ -26,7 +26,7 @@ module.exports = {
       //var projectname = project.split(reg)[0];
       var project_data = yamlFront.loadFront(fse.readFileSync("./projects/" + project + "/description.md", "utf8"));
 
-      project_data["slug"] = project
+      project_data["slug"] = project;
 
       project_data["__content"] = marked(project_data["__content"]); //turn .md description into HTML
 
@@ -43,10 +43,9 @@ module.exports = {
 
     var index_template = Handlebars.compile(fse.readFileSync("./templates/index.hbs", "utf8"));
 
-
     fse.outputFileSync("./build/index.html", index_template(listprojects));
 
-    fse.copy("./templates/about.html", "./build/about.html")
+    fse.copySync("./templates/about.html", "./build/about.html");
 
 
   }
