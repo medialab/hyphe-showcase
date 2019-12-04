@@ -34,7 +34,9 @@
 
       {{#if short_abstract}}
         <p>
-          <i><dd>{{short_abstract}}</dd></i>
+          <i>
+            <dd>{{short_abstract}}</dd>
+          </i>
         </p>
       {{/if}}
 
@@ -46,22 +48,24 @@
 
       <div class="info-display">
 
-        <div style=" display:flex; flex-direction: column; justify-content: space-evenly; margin: 16px; flex-wrap: wrap; flex: 1">
+        <div style=" display:flex; flex-direction: column; justify-content: flex-start; margin: 16px; flex-wrap: wrap; flex: 1">
           <div style=" display:flex">
             <i class="material-icons mdl-list__item-icon">people</i>
-            <div style="display:flex; flex-direction: column; margin: 5px;">
-              <b>Authors: </b>
-              <ul>
-                {{#each authors as |author|}}
-                  <li>{{author}} </li>
-                {{/each}}
-              </ul>
+            <div style="display:flex; flex-direction: column; margin-left: 5px; ">
+              <p>
+                <b>Authors: </b>
+                <ul>
+                  {{#each authors as |author|}}
+                    <li>{{author}} </li>
+                  {{/each}}
+                </ul>
+              </p>
             </div>
           </div>
 
           <div style=" display:flex">
             <i class="material-icons mdl-list__item-icon">calendar_today</i>
-            <div style="display:flex; flex-direction: column; margin: 5px; ">
+            <div style="display:flex; flex-direction: column; margin-left: 5px; ">
               <p>
                 <b>Publication date:</b>
                 <div> {{year}} </div>
@@ -69,9 +73,8 @@
             </div>
           </div>
           <div style=" display:flex">
-            <i class="material-icons mdl-list__item-icon">people</i>
-            <div style="display:flex; flex-direction: column; margin: 5px;">
-              <b>Publications about this topic: </b>
+            <i class="material-icons mdl-list__item-icon">link</i>
+            <div style="display:flex; flex-direction: column; margin-left: 5px; "> <b>Publications about this topic: </b>
               <ul>
                 {{#each publications as |publication|}}
                   <li><a href={{publication.link}}>{{publication.link}}</a> </li>
@@ -85,7 +88,7 @@
 
         <div style=" display:flex;  margin-top: 16px; margin-bottom: 16px; flex:1">
           <i class="material-icons mdl-list__item-icon">menu_book</i>
-          <div class="md_content">
+          <div style="display:flex; flex-direction: column; margin-left: 5px; ">
             <p>
               <b>Description:</b>
               {{{__content}}}
