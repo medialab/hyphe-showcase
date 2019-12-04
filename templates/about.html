@@ -2,7 +2,7 @@
 
 <head>
   <meta charset="UTF-8">
-<link rel='icon' href='../assets/favicon.ico' type='image/x-icon'/ >
+  <link rel='icon' href='../assets/favicon.ico' type='image/x-icon' />
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet">
@@ -14,12 +14,14 @@
 
   <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
     <div class="mdl-layout__drawer">
-      <div class="mdl-layout__title">hyphe showcase</div>
-      <img src="../assets/HYPHE.svg" alt="hyphe logo">
+      <div class="drawer_title">
+        <img src="./assets/HYPHE.svg" alt="hyphe logo">
+        <h2>hyphe showcase</h2>
+      </div>
       <nav class="mdl-navigation">
         <a class="mdl-navigation__link" href="../build/index.html">Projects</a>
         <a class="mdl-navigation__link" href="./about.html">About</a>
-        <a class="mdl-navigation__link" href="https://medialab.sciencespo.fr/"> <img src="../assets/medialab.png" alt="medialab logo"></a>
+        <a class="mdl-navigation__link" style="position: absolute; bottom: 5px" href="https://medialab.sciencespo.fr/" target="_blank"> <img src="../assets/medialab.png" alt="medialab logo"></a>
 
       </nav>
     </div>
@@ -30,43 +32,51 @@
         <h1>
           About
         </h1>
-        <div style=" display:flex; flex-direction: column; margin-left: 20%; margin-right: 20%; margin-top: 5%; margin-bottom: 5%">
-          <p>
-            Welcome to Hyphe, a research-driven web crawler developped at the Sciences Po médialab for the DIME-SHS Web project (ANR-10-EQPX-19-01).
-          </p>
+        <div style="margin-top: 20px;">
+          <div style="display: flex; justify-content: row;">
+            <!-- <div style=" display:flex; flex-direction: column; margin-left: 20%; margin-right: 20%; margin-top: 3%; margin-bottom: 3%"> -->
+            <div style="display:flex; flex-direction: column; flex: 1; padding-right: 30px;">
+              <p>
+                This website's purpose is to showcase what can be achieved with hyphe, a research-driven web crawler developped at the Sciences Po médialab for the DIME-SHS Web project (ANR-10-EQPX-19-01).
+              </p>
 
-          <p>
-            Hyphe aims at providing a tool to build web corpus by crawling data from the web and generating networks between what we call "web entities", which can be single pages as well as a website, subdomains or parts of it, or even a combination
-            of those.
-          </p>
-          <p>
-            Learn more and practice on the  <a style="display: inline" href="http://tools.medialab.sciences-po.fr/" target="_blank"> main website </a> or on our <a style="display: inline" href="https://github.com/medialab/hyphe" target="_blank"> GitHub Page</a>.
-          </p>
+              <p>
+                Hyphe aims at providing a tool to build web corpus by crawling data from the web and generating networks between what we call "web entities", which can be single pages as well as a website, subdomains or parts of it, or even a
+                combination
+                of those.
+              </p>
+              <p>
+                Learn more and practice on the <a style="display: inline" href="http://tools.medialab.sciences-po.fr/" target="_blank"> main website </a> or on our <a style="display: inline" href="https://github.com/medialab/hyphe" target="_blank">
+                  GitHub Page</a>.
+              </p>
 
-          <!-- <div style=" display:flex; flex-direction: row; justify-content: space-evenly; margin-top: 3%">
+              <!-- <div style=" display:flex; flex-direction: row; justify-content: space-evenly; margin-top: 3%">
             <a style=" display:flex; justify-content: center;" class="mdl-navigation__link" href="https://medialab.sciencespo.fr/"> <img src="../assets/medialab.png" alt="medialab logo"></a>
 
             <a style=" display:flex; justify-content: center;" class="mdl-navigation__link" href="https://medialab.sciencespo.fr/"> <img src="../assets/GitHub_Logo_Grey.png" alt="GitHub logo"></a>
           </div> -->
 
-        </div>
+            </div>
 
 
-        <div style=" display:flex; flex-direction: column; margin-left: 20%; margin-right: 20%; margin-top: 5%; margin-bottom: 5%">
-          <p>
-            Discover more of our projects at <a style="display: inline" href="http://tools.medialab.sciences-po.fr/" target="_blank">médialab tools</a>.
-          </p>
+            <!-- <div style=" display:flex; flex-direction: column; margin-left: 20%; margin-right: 20%; margin-top: 0%; margin-bottom: 5%"> -->
+            <div style=" display:flex; flex-direction: column; flex: 1; padding-left: 30px;">
+              <h2>Credits</h2>
+              <p>
+                Discover more of our projects at <a style="display: inline" href="http://tools.medialab.sciences-po.fr/" target="_blank">médialab tools</a>.
+              </p>
 
-          <p>
-            This work is supported by DIME-Web, part of DIME-SHS research equipment financed by the EQUIPEX program (ANR-10-EQPX-19-01).
-          </p>
+              <p>
+                This work is supported by DIME-Web, part of DIME-SHS research equipment financed by the EQUIPEX program (ANR-10-EQPX-19-01).
+              </p>
 
-          <div style=" display:flex; flex-direction: row; justify-content: space-evenly; margin-top: 3%; height: 128px">
-            <a style="display:flex; justify-content: center" class="mdl-navigation__link" href="https://anr.fr/fr/investissements-davenir/les-investissements-davenir/"> <img src="../assets/CGI.png" width="128" height="128" alt="ANR logo"></a>
+              <div style=" display:flex; flex-direction: row; justify-content: space-evenly; margin-top: 3%; height: 128px">
+                <a style="display:flex; justify-content: center" class="mdl-navigation__link" href="https://anr.fr/fr/investissements-davenir/les-investissements-davenir/"> <img src="../assets/CGI.png" width="128" height="128" alt="ANR logo"></a>
 
+              </div>
+            </div>
           </div>
         </div>
-
     </main>
   </div>
 
