@@ -8,10 +8,7 @@ module.exports = {
   build: function() {
 
     //const reg = /\.[^.]+$/;
-    listprojects = {};
-
-    //building leftBar
-    Handlebars.registerPartial("leftBarPartial", fse.readFileSync("./partials/left_bar.hbs", "utf8"));
+    const listprojects = {};
 
     fse.removeSync("./build");
 
@@ -19,21 +16,21 @@ module.exports = {
     fse.copySync("./assets", "./build/assets");
 
     // building project page
-    var project_template = Handlebars.compile(fse.readFileSync("./templates/project.hbs", "utf8"));
+    const projectTemplate = Handlebars.compile(fse.readFileSync("./templates/project.hbs", "utf8"));
 
 
     fse.readdirSync("./projects").forEach(project => {
       //var projectname = project.split(reg)[0];
-      var project_data = yamlFront.loadFront(fse.readFileSync("./projects/" + project + "/description.md", "utf8"));
+      const projectData = yamlFront.loadFront(fse.readFileSync("./projects/" + project + "/description.md", "utf8"));
 
-      project_data["slug"] = project;
+      projectData.slug = project;
 
-      project_data["__content"] = marked(project_data["__content"]); //turn .md description into HTML
+      projectData.__content = marked(projectData["__content"]); //turn .md description into HTML
 
-      listprojects[project] = project_data; //building a list to be used in the partial for the index page
+      listprojects[project] = projectData; //building a list to be used in the partial for the index page
 
 
-      fse.outputFileSync("./build/projects/" + project + ".html", project_template(project_data));
+      fse.outputFileSync("./build/projects/" + project + ".html", projectTemplate(projectData));
     })
 
 
@@ -41,7 +38,7 @@ module.exports = {
 
     Handlebars.registerPartial("projectSmallPartial", fse.readFileSync("./partials/project_small.hbs", "utf8"));
 
-    var index_template = Handlebars.compile(fse.readFileSync("./templates/index.hbs", "utf8"));
+    const index_template = Handlebars.compile(fse.readFileSync("./templates/index.hbs", "utf8"));
 
     fse.outputFileSync("./build/index.html", index_template(listprojects));
 
