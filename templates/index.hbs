@@ -32,10 +32,14 @@
       <h1>
         projects
       </h1>
-      <i><dd>Some examples of projects made with Hyphe.</dd></i>
+      <i>
+        <dd>Some examples of projects made with Hyphe.</dd>
+      </i>
 
       <div class="partials-container">
-        {{> projectSmallPartial}}
+        {{#each this}}
+          {{> projectSmallPartial}}
+        {{/each}}
       </div>
 
 
