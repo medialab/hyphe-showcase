@@ -29,8 +29,10 @@ const forge = {
 
       listprojects[project] = projectData; //building a list to be used in the partial for the index page
 
-
-      fse.outputFileSync("./build/projects/" + project + ".html", projectTemplate(projectData));
+      //copying the files needed in the build folder
+      fse.copySync("./projects/"+project+"/screen.png", "./build/projects/"+project+"/screen.png");
+      fse.copySync("./projects/"+project+"/bundle.json", "./build/projects/"+project+"/bundle.json");
+      fse.outputFileSync("./build/projects/"+project+"/" + project + ".html", projectTemplate(projectData));
     })
 
 

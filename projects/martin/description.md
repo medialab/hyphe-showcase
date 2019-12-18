@@ -13,7 +13,7 @@ publications:
 
 short_abstract: les gens se piscinent à stTrop
 
-url_embed: https://medialab.github.io/minivan/#/embeded-network?x=0.44784784226029595&y=0.4952751236709172&ratio=1.3436928&showLink=true&bundle=http%3A%2F%2F127.0.0.1%3A8080%2Fprojects%2Fprivacy%2Fbundle.json
+url_embed: https://medialab.github.io/minivan/#/embeded-network?x=0.4779587250772841&y=0.5251138785817417&ratio=0.7904075294117647&name=Privacy&showLink=true&bundle=http%3A%2F%2F127.0.0.1%3A8080%2Fprojects%2Fprivacy%2Fbundle.json&lockNavigation=true&color=attr_8b626579e733679b7fd0825ae509a80f
 
 ---
 
