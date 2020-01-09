@@ -199,7 +199,7 @@ a.nostyle:visited {
 }
 
 /* Media Queries */
-@media screen and (max-width: 1020px) {
+@media screen and (max-width: 1024px) {
   main>.info-display {
     display: flex;
     flex-flow: column nowrap;
