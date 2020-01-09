@@ -32,7 +32,8 @@ const forge = {
       //copying the files needed in the build folder
       fse.copySync("./projects/"+project+"/screen.png", "./build/projects/"+project+"/screen.png");
       fse.copySync("./projects/"+project+"/bundle.json", "./build/projects/"+project+"/bundle.json");
-      fse.outputFileSync("./build/projects/"+project+"/" + project + ".html", projectTemplate(projectData));
+      //fse.copySync("./projects/"+project+"/network.gexf", "./build/projects/"+project+"/network.gexf");
+      fse.outputFileSync("./build/"+project+".html", projectTemplate(projectData));
     })
 
 
