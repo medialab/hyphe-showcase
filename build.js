@@ -14,6 +14,7 @@ const forge = {
 
     //getting the assets
     fse.copySync("./assets", "./build/assets");
+    fse.copySync("./favicon.ico", "./build/favicon.ico");
 
     // building project page
     const projectTemplate = Handlebars.compile(fse.readFileSync("./templates/project.hbs", "utf8"));
