@@ -8,7 +8,7 @@
     "build-ssl-keys": "openssl genrsa -out key.pem && openssl req -new -key key.pem -out csr.pem && openssl x509 -req -days 9999 -in csr.pem -signkey key.pem -out cert.pem && rm csr.pem",
     "serve": "npm run build && cd build && http-server --cors -S -C ../cert.pem -K ../key.pem -o -p 8000"
   },
-  "author": "",
+  "author": "Martin Delabre, Guillaume Plique",
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^5.0.0",
@@ -19,9 +19,16 @@
     "prettier": "^1.19.1"
   },
   "dependencies": {
+<<<<<<< Updated upstream
     "hbs": "^4.0.6",
     "jquery": "^3.4.1",
     "material-design-lite": "^1.3.0",
     "yaml-front-matter": "^4.0.0"
+=======
+    "metalsmith-assets": "^0.1.0",
+    "metalsmith-collections": "^0.9.0",
+    "metalsmith-permalinks": "^2.2.0",
+    "metalsmith-watch": "^1.0.3"
+>>>>>>> Stashed changes
   }
 }
