@@ -14,7 +14,7 @@ publications:
 
 short_abstract: Ce que tu veux
 
-url_embed: https://medialab.github.io/minivan/#/embeded-network?showLink=true&bundle=http%3A%2F%2F127.0.0.1%3A8080%2Fprojects%2Fprivacy%2Fbundle.json&lockNavigation=true
+url_embed: https://medialab.github.io/minivan/#/embeded-network?showLink=true&bundle=https%3A%2F%2F127.0.0.1%3A8000%2Fprojects%2Fprivacy%2Fbundle.json&lockNavigation=true
 ---
 
 This project aims to explore and analyze the **different forms of data regulation** such as law, social, code and market (Lessig, 2000).

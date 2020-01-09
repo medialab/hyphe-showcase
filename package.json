@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "node ./build.js",
-    "serve": "npm run build && cd build && http-server -o -p 8000"
+    "build-ssl-keys": "openssl genrsa -out key.pem && openssl req -new -key key.pem -out csr.pem && openssl x509 -req -days 9999 -in csr.pem -signkey key.pem -out cert.pem && rm csr.pem",
+    "serve": "npm run build && cd build && http-server --cors -S -C ../cert.pem -K ../key.pem -o -p 8000"
   },
   "author": "",
   "license": "ISC",
