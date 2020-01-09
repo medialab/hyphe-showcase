@@ -12,7 +12,7 @@ publications:
   - link: https://www.youtube.com/watch?v=tRcPA7Fzebw
     text: staaaaaaaaaarman in Starman, 2012
 
-short_abstract: les gens se piscinent à stTrop
+short_abstract: Ce que tu veux
 
 url_embed: https://medialab.github.io/minivan/#/embeded-network?showLink=true&bundle=http%3A%2F%2F127.0.0.1%3A8080%2Fprojects%2Fprivacy%2Fbundle.json&lockNavigation=true
 ---

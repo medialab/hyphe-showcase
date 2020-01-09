@@ -17,5 +17,5 @@ url_embed: https://medialab.github.io/minivan/#/embeded-network?x=0.477958725077
 
 ---
 
-# Les vacances
+# Les vacances à la plage
 super on va avoir du **sable** dans les chaussettes
