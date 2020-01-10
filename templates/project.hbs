@@ -39,13 +39,13 @@
 
         <div style=" display:flex; flex-direction: column; justify-content: flex-start; margin: 16px; flex-wrap: wrap; flex: 1">
           <div style=" display:flex">
-            <i class="material-icons mdl-list__item-icon">people</i>
-            <div style="display:flex; flex-direction: column; margin-left: 5px; ">
+            <span class="material-icons mdl-list__item-icon">people</span>
+            <div style="display:flex; flex-direction: column; margin-left: 5px;">
               <p>
-                <b>Authors: </b>
+                <b>Authors:</b>
                 <ul>
                   {{#each authors as |author|}}
-                    <li>{{author}} </li>
+                    <li>{{author}}</li>
                   {{/each}}
                 </ul>
               </p>
@@ -53,22 +53,25 @@
           </div>
 
           <div style=" display:flex">
-            <i class="material-icons mdl-list__item-icon">calendar_today</i>
-            <div style="display:flex; flex-direction: column; margin-left: 5px; ">
+            <span class="material-icons mdl-list__item-icon">calendar_today</span>
+            <div style="display:flex; flex-direction: column; margin-left: 5px;">
               <p>
                 <b>Publication date:</b>
-                <div> {{year}} </div>
+                <div>{{year}}</div>
               </p>
             </div>
           </div>
           <div style=" display:flex">
-            <i class="material-icons mdl-list__item-icon">link</i>
-            <div style="display:flex; flex-direction: column; margin-left: 5px; "> <b>Publications about this topic: </b>
-              <ul>
+            <span class="material-icons mdl-list__item-icon">link</span>
+            <div style="display:flex; flex-direction: column; margin-left: 5px;">
+              <p>
+                <b>Publications about this topic:</b>
+                <ul>
                 {{#each publications as |publication|}}
                   <li><a href={{publication.link}}>{{publication.link}}</a> </li>
                 {{/each}}
-              </ul>
+                </ul>
+              </p>
             </div>
           </div>
 
@@ -76,8 +79,8 @@
 
 
         <div style=" display:flex;  margin-top: 16px; margin-bottom: 16px; flex:1">
-          <i class="material-icons mdl-list__item-icon">menu_book</i>
-          <div style="display:flex; flex-direction: column; margin-left: 5px; ">
+          <span class="material-icons mdl-list__item-icon">menu_book</span>
+          <div style="display:flex; flex-direction: column; margin-left: 5px;">
             <p>
               <b>Description:</b>
               {{{__content}}}
