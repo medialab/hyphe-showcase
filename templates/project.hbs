@@ -97,10 +97,10 @@
   <script>    //sonstructing URL of the bundle for the iframe
     document.addEventListener("DOMContentLoaded", function() {
       console.log('Your document is ready!');
-      var path_to_bundle = window.location.origin+"/projects/{{slug}}/bundle.json&lockNavigation=true"
-      var options_set = Boolean("{{minivan_options}}") //check if there are additionnal options in the YAML
+      var path_to_bundle = window.location.origin+"/projects/{{slug}}/bundle.json"
+      var options_set = Boolean("{{{minivan_options}}}") //check if there are additionnal options in the YAML
       if (options_set){
-        path_to_bundle +=  "{{minivan_options}}"
+        path_to_bundle +=  "&{{{minivan_options}}}"
       }
       var url_embed = "https://medialab.github.io/minivan/#/embeded-network?showLink=true&bundle=" + encodeURI(path_to_bundle)
       document.getElementsByTagName("iframe")[0].src = url_embed;

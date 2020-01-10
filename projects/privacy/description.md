@@ -9,13 +9,12 @@ contact: maxime.crepel@sciencespo.fr
 publications:
   - link: https://medialab.github.io/privacy/
     text: Privacy datascape - médialab
-  - link: 	https://medialab.sciencespo.fr/activites/insurance-for-building-trust-and-enabling-big-data/
+  - link: https://medialab.sciencespo.fr/activites/insurance-for-building-trust-and-enabling-big-data/
     text: Insurance for building trust and enabling big data - médialab
 
 short_abstract: The Privacy datascape is a structured dataset of web pages tagged with topics to explore data privacy issues
 
-
-minivan_options: null
+minivan_options: x=0.44784784226029595&y=0.4952751236709172&ratio=1.3436928&size=attr_hyphe_indegree&color=attr_0b49190359c4c673e006b58fdd209316
 ---
 
 This project aims to explore and analyze the **different forms of data regulation** such as law, social, code and market (Lessig, 2000).
