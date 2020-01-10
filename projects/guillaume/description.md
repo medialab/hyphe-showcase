@@ -13,7 +13,7 @@ publications:
 
 short_abstract: Une bien jolie histoire
 
-url_embed: https://medialab.github.io/minivan/#/embeded-network?x=0.44784784226029595&y=0.4952751236709172&ratio=1.3436928&showLink=true&bundle=https%3A%2F%2F127.0.0.1%3A8000%2Fprojects%2Fprivacy%2Fbundle.json&lockNavigation=true
+minivan_options: null
 ---
 
 # Le séjour à la montagne

@@ -12,7 +12,7 @@ publications:
 
 short_abstract: Une cartographie Web de l'écosystème IA en France - Qui sont les acteurs de l’écosystème IA français ? Quelles relations entretiennent-ils sur le Web ?
 
-url_embed: https://medialab.github.io/minivan/#/embeded-network?x=0.5133188963141933&y=0.5242779353745229&ratio=1.3436928&name=IA%20ecosystem%20in%20France&showLink=true&bundle=https%3A%2F%2Fgist.githubusercontent.com%2FMaximeSCPO%2Fbc8a8b9b2e6f4df583feaeec852aa162%2Fraw%2F49cb5a92a7298cc8d186f493e9565c80cbb725c6%2FIA_ecosystem_France.json&lockNavigation=true&color=cluster
+minivan_options: null
 ---
 
 Cette cartographie, sans prétendre à l’exhaustivité, tente de rendre compte de la composition et de la structure relationnelle des différents acteurs de l’IA en France sur le Web. Elle laisse apercevoir une segmentation entre plusieurs communautés d’acteurs majeures que sont les acteurs économiques (startups, incubateurs, etc.), les laboratoires et équipes de recherche en intelligence artificielle, ainsi que les communautés de développeurs qui se retrouvent autour d'événements (meetup) et les repository (Github) qui dessinent un réseau socio-technique d’acteurs variés (code logiciel, page de développeurs, de projet, d’équipe ou d’entreprise) interconnectés entre eux.
