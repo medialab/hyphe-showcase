@@ -19,16 +19,9 @@
     "prettier": "^1.19.1"
   },
   "dependencies": {
-<<<<<<< Updated upstream
     "hbs": "^4.0.6",
     "jquery": "^3.4.1",
     "material-design-lite": "^1.3.0",
     "yaml-front-matter": "^4.0.0"
-=======
-    "metalsmith-assets": "^0.1.0",
-    "metalsmith-collections": "^0.9.0",
-    "metalsmith-permalinks": "^2.2.0",
-    "metalsmith-watch": "^1.0.3"
->>>>>>> Stashed changes
   }
 }
