@@ -10,9 +10,9 @@ publications:
   - link: https://medialab.sciencespo.fr/actu/une-cartographie-web-de-lecosysteme-ia-en-france/
     text: Une cartographie Web de l'écosystème IA en France - médialab Sciences Po - 2019
 
-short_abstract: A web cartography of France's AI ecosystem in 2019: who are the main actors and how do they cite each other on the web?
+short_abstract: "A web cartography of France's AI ecosystem in 2019: who are the main actors and how do they cite each other on the web?"
 
-minivan_options: 
+minivan_options:
 ---
 
 Cette cartographie, sans prétendre à l’exhaustivité, tente de rendre compte de la composition et de la structure relationnelle des différents acteurs de l’IA en France sur le Web. Elle laisse apercevoir une segmentation entre plusieurs communautés d’acteurs majeures que sont les acteurs économiques (startups, incubateurs, etc.), les laboratoires et équipes de recherche en intelligence artificielle, ainsi que les communautés de développeurs qui se retrouvent autour d'événements (meetup) et les repository (Github) qui dessinent un réseau socio-technique d’acteurs variés (code logiciel, page de développeurs, de projet, d’équipe ou d’entreprise) interconnectés entre eux.
