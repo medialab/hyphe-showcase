@@ -14,7 +14,7 @@ const forge = {
 
     //getting the assets
     fse.copySync("assets", "build/assets");
-    fse.copySync("favicon.ico", "build/favicon.ico");
+    fse.moveSync("build/assets/favicon.ico", "build/favicon.ico");
 
 
     //Building the partials
